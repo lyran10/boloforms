@@ -1,3 +1,8 @@
+import {AiFillQuestionCircle} from "react-icons/ai"
+import {IoRocketSharp} from "react-icons/io5"
+import {BiSupport} from "react-icons/bi"
+import {SiHandshake} from "react-icons/si"
+
 
 // features
 export const array = [
@@ -213,4 +218,42 @@ export const box4 = [
   {
     legal : "Data Security and Policy"
   }
+]
+
+//DropDownList
+export const dropDownList =  [
+  {
+    img : "https://www.boloforms.com/_next/static/media/TP.5489abce.svg",
+    header : "Form Approval",
+    line : "Create interactive workflows, approval flows &amp; automate processes using Google Forms."
+  },
+  {
+    img : "https://www.boloforms.com/_next/static/media/FA.c696cc9e.svg",
+    header : "SheetGod",
+    line : "AI poewer Excel made easy!"
+  },
+  {
+    img : "https://www.boloforms.com/_next/static/media/S.87bf14fd.svg",
+    header : "Signature",
+    line : "Add signature href you Google Forms"
+  }
+]
+
+export const dot  = [
+  {
+    header : "Our Customers",
+    icon : <SiHandshake className="mt-1"/>
+  },
+  {
+    header : "How to use?",
+    icon : <AiFillQuestionCircle className="mt-1"/>
+  },
+  {
+    header : "Features",
+    icon : <IoRocketSharp className="mt-1"/>
+  },
+  {
+    header : "Support",
+    icon : <BiSupport className="mt-1"/>
+  },
 ]

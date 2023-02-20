@@ -20,7 +20,7 @@ export const Carousel = () => {
   },[])
 
   return (
-    <div className='mt-[50px] flex p-3 gap-[100px] w-5/6 flex-col justify-center items-center overflow-hidden'>
+    <div id="customers" className='mt-[50px] flex p-3 gap-[100px] w-5/6 flex-col justify-center items-center overflow-hidden'>
       <span className='font-semibold text-md lg:text-3xl sm:text-3xl md:text-3xl tracking-wide'>BoloForms is user by</span>
       <div style={{transform: `translateX(-${curr*100}px)`}} className='flex transition duration-500 ml-[1100px] sm:ml-[800px] md:ml-[600px] lg:ml-[600px]'>
         {images.map((img,index) => {

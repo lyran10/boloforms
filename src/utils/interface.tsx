@@ -73,3 +73,15 @@ export interface Ans1 {
   ans11: boolean
   ans12 : boolean
 }
+
+// navList
+export interface ShowDropDown {
+  show : string,
+  setShow : React.Dispatch<React.SetStateAction<string>>
+}
+
+// Dots
+export interface Dot {
+  header : string,
+  icon : JSX.Element
+}

@@ -2,8 +2,9 @@ import React,{useState} from 'react'
 import { Hamburger } from './hamburger'
 import { Menu } from './menu'
 import { NavList } from './navList'
+import { ShowDropDown } from '../../utils/interface'
 
-export const Nav = () => {
+export const Nav = ({show,setShow} : ShowDropDown) => {
   const [showMenu,setShowMenu] = useState<string>("opacity-0")
   const [translateMenu,setTranslateMenu] = useState<string>("translate-x-[1800px]")
 
@@ -11,7 +12,7 @@ export const Nav = () => {
     <nav className='fixed z-[100] h-20 bg-[rgba(250,250,250,.95)] w-full flex justify-around items-center p-3'>
       <div className='flex gap-5' >
       <img src="https://www.boloforms.com/_next/static/media/logo-text.e6f7617c.svg" alt="" className='h-28' />
-        <NavList/>
+        <NavList show={show} setShow={setShow}/>
         </div>
       <Hamburger translateMenu={translateMenu} setTranslateMenu={setTranslateMenu} setShowMenu={setShowMenu} showMenu={showMenu}/>
      

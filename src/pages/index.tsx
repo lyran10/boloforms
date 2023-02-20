@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Nav } from '../components/nav/nav'
 import { Home } from '../components/home/home'
 import {Carousel} from "../components/carousel/carousel"
@@ -18,15 +18,19 @@ import { AwardWinning } from '../components/awardWinning/awardWinning'
 import { FreqAskedQue } from '../components/FreqAskedQue/freqAskedQue'
 import { TrustingCustomers } from '../components/trustingCustomers/trustingCustomers'
 import { Footer } from '../components/footer/footer'
+import { DropDownMenu } from '../components/dropDownMenu/dropDownMenu'
+import { Dots } from '../components/dots/dots'
 
 export const Index = () => {
+  const [show,setShow] = useState<string>("hidden")
   return (
     <main className='flex flex-col items-center bg-white transition duration-500'>
-        <Nav/>
+        <Nav show={show} setShow={setShow}/>
+        <DropDownMenu show={show}/>
+        <Dots/>
         <Home/>
         <Carousel/>
         <BoloformsWork/>
-
         <Comment comp1={<Trusted/>} comp2={ <Install width="w-[200px]" icon={<FaCloudDownloadAlt/>} padding='p-2' gap="gap-2"/>} comp3={<Premium width="w-[200px]" bg="bg-white" text="text-[#915bff]" icon={<IoRocketSharp/>}/>} width="https://www.boloforms.com/_next/static/media/repa.483a1471.jpeg" content=' "BoloForms has been an absolute lifesaver for me. It makes workflow tasks much easier and helps to ensure the everything runs smoothly. I love how it automates tasks and eliminate manual processess, saving me time and effort. It"s a great Google Workflow software and is well worth the money!"' name="Repa Mandala"/>
 
         <Features/>

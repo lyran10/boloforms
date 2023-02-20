@@ -34,9 +34,9 @@ const quesAndAns = () => {
             <div className='flex w-full justify-between gap-2'>
               <span className='font-black text-lg'>{data.question}</span>
               {!ans[keys[index]] ?
-              <GoChevronDown onClick={() => setAns({...ans,[keys[index]] : ans[keys[index]]  === false ?true : false})} className='cursor-pointer'/> 
+              <GoChevronDown size={25} onClick={() => setAns({...ans,[keys[index]] : ans[keys[index]]  === false ?true : false})} className='cursor-pointer'/> 
               :
-             <GoChevronUp onClick={() => setAns({...ans,[keys[index]] : ans[keys[index]]  === false ?true : false})} className='cursor-pointer'/>}
+             <GoChevronUp size={25} onClick={() => setAns({...ans,[keys[index]] : ans[keys[index]]  === false ?true : false})} className='cursor-pointer'/>}
              
             </div>
             {!ans[keys[index]] ? null : <span>{data.answer}</span>}
@@ -54,9 +54,9 @@ const quesAndAns1 = () => {
           <div className='flex w-full justify-between'>
             <span className='font-black text-lg'>{data.question}</span>
             {!ans1[keys1[index]] ?
-            <GoChevronDown onClick={() => setAns1({...ans1,[keys1[index]] : ans1[keys1[index]]  === false ?true : false})} className='cursor-pointer'/> 
+            <GoChevronDown size={25} onClick={() => setAns1({...ans1,[keys1[index]] : ans1[keys1[index]]  === false ?true : false})} className='cursor-pointer'/> 
             :
-           <GoChevronUp onClick={() => setAns1({...ans1,[keys1[index]] : ans1[keys1[index]]  === false ?true : false})} className='cursor-pointer'/>}
+           <GoChevronUp size={25} onClick={() => setAns1({...ans1,[keys1[index]] : ans1[keys1[index]]  === false ?true : false})} className='cursor-pointer'/>}
            
           </div>
           {!ans1[keys1[index]] ? null : <span>{data.answer}</span>}
